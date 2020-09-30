@@ -6,7 +6,6 @@ print("Hello world 2<br>");
 
 ?>
 <script language="JavaScript" type="text/JavaScript" >
-alert("here");
 //  var _url = 'https://prod-48.westeurope.logic.azure.com:443/workflows/78f270d5827e453587e39b92d460edb8/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=s8PXNv0R4mvJkJ91sNoKUm2FVisIkfcQyuVDd1wWLGw';
   https://chrisc.westeurope-1.eventgrid.azure.net/api/events
   var _url = 'https://chrisc.westeurope-1.eventgrid.azure.net/api/events';
@@ -29,11 +28,11 @@ var xhttp=new XMLHttpRequest();
          if (xhttp.readyState == 4 ) {
 //            alert(xhttp.responseText.replace(" ",""));
             var r1= JSON.parse(xhttp.responseText);
-            alert(r1);
+            alert(r1.code);
            if (r1.code == 0 ) {
-
+           alert("OK");
            } else {
-//         alert('Response '+this.readyState+' - '+ r1.text );
+         alert('Response '+this.readyState+' - '+ r1.message );
          }    }
          
          };
@@ -41,7 +40,7 @@ var xhttp=new XMLHttpRequest();
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("j="+JSON.stringify(a));
 }
-
+submitOrder();
 </SCRIPT>
 <BR>
 <?PHP
