@@ -37,6 +37,7 @@ var xhttp=new XMLHttpRequest();
          };
     xhttp.open("POST", "https://chrisc.westeurope-1.eventgrid.azure.net/api/events?aeg-sas-key=SdIEB8CxiY6LuZcoMUGrxh+gGXXCbUtClkn5BuSQ5lI=", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.setRequestHeader("Access-Control-Allow-Origin: https://chrisc.westeurope-1.eventgrid.azure.net");
     xhttp.send(JSON.stringify(a));
 }
 submitOrder();
