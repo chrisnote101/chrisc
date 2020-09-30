@@ -1,7 +1,7 @@
 
 <?PHP
 //header("Access-Control-Allow-Origin: *");
-$ver="1.7";
+$ver="1.8";
 //header("Access-Control-Allow-Origin: https://chrisc.westeurope-1.eventgrid.azure.net");
 //header("Access-Control-Allow-Origin: https://chrisc.westeurope-1.eventgrid.azure.net/*");
 print("Hello world 2<br>");
