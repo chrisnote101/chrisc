@@ -1,14 +1,7 @@
-<Cors>
-    <CorsRule>  
-        <AllowedOrigins>https://chrisc.westeurope-1.eventgrid.azure.net>  
-        <AllowedMethods>PUT,GET</AllowedMethods>  
-        <AllowedHeaders>x-ms-meta-data*,x-ms-meta-target*,x-ms-meta-abc,application/x-www-form-urlencoded</AllowedHeaders>  
-        <ExposedHeaders>application/x-www-form-urlencoded,application*</ExposedHeaders>  
-        <MaxAgeInSeconds>200</MaxAgeInSeconds>  
-    </CorsRule>  
-<Cors> 
+
 <?PHP
-//header("Access-Control-Allow-Origin: https://chrisc.westeurope-1.eventgrid.azure.net");
+header("Access-Control-Allow-Origin: https://chrisc.westeurope-1.eventgrid.azure.net");
+header("Access-Control-Allow-Origin: https://chrisc.westeurope-1.eventgrid.azure.net/*");
 print("Hello world 2<br>");
 
 ?>
