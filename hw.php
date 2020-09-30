@@ -1,12 +1,12 @@
+<!DOCTYPE html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<HTML>
-  <script language="JavaScript" type="text/JavaScript" >
 <?PHP
 
 print("Hello world 2<br>");
 
 ?>
-<SCRIPT>
+<script language="JavaScript" type="text/JavaScript" >
+alert("here");
 //  var _url = 'https://prod-48.westeurope.logic.azure.com:443/workflows/78f270d5827e453587e39b92d460edb8/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=s8PXNv0R4mvJkJ91sNoKUm2FVisIkfcQyuVDd1wWLGw';
   https://chrisc.westeurope-1.eventgrid.azure.net/api/events
   var _url = 'https://chrisc.westeurope-1.eventgrid.azure.net/api/events';
@@ -45,6 +45,6 @@ var xhttp=new XMLHttpRequest();
 </SCRIPT>
 <BR>
 <?PHP
-  print("Complete 3<br>");
+  print("Complete 4<br>");
 
 ?>
