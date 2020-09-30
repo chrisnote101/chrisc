@@ -3,7 +3,7 @@
   <script language="JavaScript" type="text/JavaScript" >
 <?PHP
 
-print("Hello world 1<br>");
+print("Hello world 2<br>");
 
 ?>
 <SCRIPT>
@@ -45,6 +45,6 @@ var xhttp=new XMLHttpRequest();
 </SCRIPT>
 <BR>
 <?PHP
-  print("Complete<br>");
+  print("Complete 2<br>");
 
 ?>
