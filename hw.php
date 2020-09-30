@@ -1,6 +1,6 @@
 <HTML>
 <?PHP
-
+header("Access-Control-Allow-Origin: https://chrisc.westeurope-1.eventgrid.azure.net");
 print("Hello world 2<br>");
 
 ?>
