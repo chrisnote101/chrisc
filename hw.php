@@ -3,7 +3,7 @@
 header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Methods: GET, POST,OPTION ');
 header("Access-Control-Allow-Headers: token, Content-type, X-Requested-With");
-$ver="1.1";
+$ver="1.2";
 //header("Access-Control-Allow-Origin: https://chrisc.westeurope-1.eventgrid.azure.net");
 //header("Access-Control-Allow-Origin: https://chrisc.westeurope-1.eventgrid.azure.net/*");
 print("Hello world 2<br>");
