@@ -14,13 +14,13 @@ class myObj {
 //     "make": "Ducati",
 //     "model": "Monster"
 //   },  "dataVersion": "1.0"}]
-$myObj->id="10";
-$myObj->eventType="hits";
-$myObj->subject="test";
+$myObj->id="1087";
+$myObj->eventType="started";
+$myObj->subject="hits";
 $myObj->eventTime="2020-10-06T11:03:07+00:00";
 
-$ee=json_encode($myObj);
-$ver="1.5";
+$ee=json_encode($myObj,true);
+$ver="1.6";
 print("Hello world <br>");
 print("Complete ".$ver."<br>");
 $aeg="EQ3xDFMMJlW3rl+tyug6kVyzrYmjh1U0qEalJmQ/bc4=";
