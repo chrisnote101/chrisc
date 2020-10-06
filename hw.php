@@ -27,5 +27,6 @@ curl_close($ch);
 $response=json_decode($response,true);
 print("response from event : Code ".$response.code."<br>");
 print("response from event : Message ".$response.message."<br>");
+var_dump($response);
 
 ?>
