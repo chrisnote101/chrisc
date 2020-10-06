@@ -8,10 +8,12 @@ class myObj {
 $myObj->code="10";
 $myObj->topic="hits";
 $ee=json_encode($myObj);
-$ver="1.3";
+$ver="1.4";
 print("Hello world <br>");
 print("Complete ".$ver."<br>");
-$url = 'https://chrisc.westeurope-1.eventgrid.azure.net/api/events?aeg-sas-key=EQ3xDFMMJlW3rl+tyug6kVyzrYmjh1U0qEalJmQ/bc4=';
+$aeg="EQ3xDFMMJlW3rl+tyug6kVyzrYmjh1U0qEalJmQ/bc4=";
+$aeg=base64_encode($aeg);
+$url = 'https://chrisc.westeurope-1.eventgrid.azure.net/api/events?aeg-sas-key='.$aeg;
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
