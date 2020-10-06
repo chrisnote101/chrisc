@@ -1,52 +1,31 @@
 
 <?PHP
-header("Access-Control-Allow-Origin: *");
-header('Access-Control-Allow-Methods: GET, POST,OPTION ');
-header("Access-Control-Allow-Headers: token, Content-type, X-Requested-With");
-$ver="1.2";
-//header("Access-Control-Allow-Origin: https://chrisc.westeurope-1.eventgrid.azure.net");
-//header("Access-Control-Allow-Origin: https://chrisc.westeurope-1.eventgrid.azure.net/*");
-print("Hello world 2<br>");
 
-?>
-<script language="JavaScript" type="text/JavaScript" >
-//  var _url = 'https://prod-48.westeurope.logic.azure.com:443/workflows/78f270d5827e453587e39b92d460edb8/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=s8PXNv0R4mvJkJ91sNoKUm2FVisIkfcQyuVDd1wWLGw';
-//  https://chrisc.westeurope-1.eventgrid.azure.net/api/events
-  var _url = 'https://chrisc.westeurope-1.eventgrid.azure.net/api/events?aeg-sas-key=SdIEB8CxiY6LuZcoMUGrxh+gGXXCbUtClkn5BuSQ5lI=';
-  
-function submitOrder() {
-var a={};
-var d={};
-var j=[];
-    a.topic="hit";
-    a.description="another hit";
-    j.push(a);
-
-var xhttp=new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 414)  {
-           alert("URI Too long");
-         }
-         if (xhttp.readyState == 4 ) {
-//            alert(xhttp.responseText.replace(" ",""));
-            var r1= JSON.parse(xhttp.responseText);
-            alert(r1.code);
-           if (r1.code == 0 ) {
-           alert("OK");
-           } else {
-         alert('Response '+this.readyState+' - '+ r1.message );
-         }    }
-         
-         };
-    xhttp.open("POST", "https://chris-grid.westeurope-1.eventgrid.azure.net/api/events?aeg-sas-key=5yIRFdwj4DBDvRNDpViO3dNoepc0sIaRrPi3eSGAiiA=", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-//    xhttp.setRequestHeader("Access-Control-Allow-Origin", "https://chrisc.westeurope-1.eventgrid.azure.net");
-    xhttp.send(JSON.stringify(a));
+class myObj {
+    public $code;
+    public $text;
 }
-submitOrder();
-</SCRIPT>
-<BR>
-<?PHP
-  print("Complete ".$ver."<br>");
+$myObj->code="10";
+$myObj-->topic="hits";
+$ee=json_encode($myObj);
+$ver="1.2";
+print("Hello world <br>");
+print("Complete ".$ver."<br>");
+$url = 'https://chrisc.westeurope-1.eventgrid.azure.net/api/events?aeg-sas-key=EQ3xDFMMJlW3rl+tyug6kVyzrYmjh1U0qEalJmQ/bc4=';
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
+curl_setopt($ch, CURLOPT_TIMEOUT, 4);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS,$ee);
+//curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
+//curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json' ,'Content-Length: ' . strlen(json_encode($arr)))   );  
+curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/x-www-form-urlencoded' ,'Content-Length: ' . strlen($ee))   );  
+$response = curl_exec($ch); 
+curl_close($ch);
+$response=json_decode($response,true);
+print("response from event : Code ".$response.code."<br>");
+print("response from event : Message ".$response.message."<br>");
 
 ?>
