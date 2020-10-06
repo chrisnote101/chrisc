@@ -6,9 +6,9 @@ class myObj {
     public $text;
 }
 $myObj->code="10";
-$myObj-->topic="hits";
+$myObj->topic="hits";
 $ee=json_encode($myObj);
-$ver="1.2";
+$ver="1.3";
 print("Hello world <br>");
 print("Complete ".$ver."<br>");
 $url = 'https://chrisc.westeurope-1.eventgrid.azure.net/api/events?aeg-sas-key=EQ3xDFMMJlW3rl+tyug6kVyzrYmjh1U0qEalJmQ/bc4=';
