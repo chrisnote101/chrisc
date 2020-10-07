@@ -24,7 +24,7 @@ $ee = "[{ 'subject': 'test','eventType': 'abc'}]";
 
 //$ee=json_encode($myObj,true);
 //$ee=json_encode($ee,true);
-$ver="1.0";
+$ver="1.1";
 print("Hello world <br>");
 print("Complete ".$ver."<br>");
 $aeg="hbWh1Y9LRrQ9vng/WNMVPNPvllSE9v22/j6e46OHnTw=";
@@ -40,7 +40,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS,$ee);
 //curl_setopt($ch, CURLOPT_USERPWD, $username . ":" . $password);
 //curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json' ,'Content-Length: ' . strlen(json_encode($arr)))   );  
-curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'aeg-sas-key: EQ3xDFMMJlW3rl+tyug6kVyzrYmjh1U0qEalJmQ/bc4=', 'Content-Type: application/x-www-form-urlencoded' ,'Content-Length: ' . strlen($ee))   );  
+curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'aeg-sas-key: hbWh1Y9LRrQ9vng/WNMVPNPvllSE9v22/j6e46OHnTw=', 'Content-Type: application/x-www-form-urlencoded' ,'Content-Length: ' . strlen($ee))   );  
 //curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/x-www-form-urlencoded' ,'Content-Length: ' . strlen($ee))   );  
 $response = curl_exec($ch); 
 curl_close($ch);
