@@ -20,11 +20,11 @@ class myObj {
 //$myObj->eventTime="2020-10-06T11:03:07+00:00";
 //$ee = array('id' => '1087',  'eventType'  => 'Start',  'subject'    => 'hits');
 //$ee = array('subject' => 'test','eventType' => 'abc');
-$ee = "[{ 'subject': 'test','eventType': 'abc','id':'1011'}]";
+$ee = "[{ 'subject': 'test','eventType': 'abc','id':'1014','eventTime': '2020-07-10T09:58:07'}]";
 
 //$ee=json_encode($myObj,true);
 //$ee=json_encode($ee,true);
-$ver="1.4";
+$ver="1.5";
 print("Hello world <br>");
 print("Complete ".$ver."<br>");
 $aeg="hbWh1Y9LRrQ9vng/WNMVPNPvllSE9v22/j6e46OHnTw=";
