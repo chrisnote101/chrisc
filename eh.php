@@ -24,7 +24,7 @@ curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS,$ee);
 //curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json' ,'Content-Length: ' . strlen(json_encode($arr)))   );  
-curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'SharedAccessKeyName: chrisSend','SharedAccessKey: ieeHKghW60O4ZhSV2icXAVbmiEE/FT3RSiNC9t0SrfE=', 'Content-Type: application/x-www-form-urlencoded' ,'Content-Length: ' . strlen($ee))   );  
+curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'SharedAccessKeyName: chrisSend','SharedAccessKey: ieeHKghW60O4ZhSV2icXAVbmiEE/FT3RSiNC9t0SrfE', 'Content-Type: application/x-www-form-urlencoded' ,'Content-Length: ' . strlen($ee))   );  
 //curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/x-www-form-urlencoded' ,'Content-Length: ' . strlen($ee))   );  
 $response = curl_exec($ch); 
 curl_close($ch);
