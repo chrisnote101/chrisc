@@ -15,7 +15,7 @@ $aeg="ieeHKghW60O4ZhSV2icXAVbmiEE/FT3RSiNC9t0SrfE=";
 //$url = 'https://chrisc.westeurope-1.eventgrid.azure.net/api/events?aeg-sas-key='.$aeg;
 $url = 'https://chrisc.westeurope-1.eventgrid.azure.net/api/events';
 //$url=sb://chriseh.servicebus.windows.net/;SharedAccessKeyName=chrisSend;SharedAccessKey=ieeHKghW60O4ZhSV2icXAVbmiEE/FT3RSiNC9t0SrfE=;EntityPath=chrisehhub";
-$url="https://chriseh.servicebus.windows.net?EntityPath=chrisehhub";
+$url="sb://chriseh.servicebus.windows.net?EntityPath=chrisehhub";
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
