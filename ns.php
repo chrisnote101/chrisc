@@ -6,9 +6,9 @@ class myObj {
 $aa = array("name"=>"abc123@abc.com");
 //$ee = '[{ "name": "abc123@123abc.com"}]';
 
-$ver="1.1";
+$ver="1.0";
 print("New sub test v".$ver."<br>");
-print("Sub for ".$aa=>"name"."<br>");
+print("Sub for ".$aa->"name"."<br>");
 $ee=json_encode($aa);
 $url="https://intakefromcdi.azurewebsites.net/api/CreatePlayground";
 $ch = curl_init($url);
