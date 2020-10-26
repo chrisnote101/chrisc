@@ -5,7 +5,7 @@ class myObj {
 }
 $ee = "{ 'name': 'abc123@123abc.com'}";
 
-$ver="1.0";
+$ver="1.4";
 print("New sub test v".$ver."<br>");
 print("Sub for ".$ee["name"]."<br>");
 $aeg="ieeHKghW60O4ZhSV2icXAVbmiEE/FT3RSiNC9t0SrfE=";
@@ -29,6 +29,12 @@ print("                          tx : ".$response.tx."<br>");
 print("response from event     Code :".$response.["returnCode"]."<br>");
 print("                    username :".$response.["username"]."<br>");
 print("                          tx : ".$response.["tx"]."<br>");
+print("response from event     Code :".$response["returnCode"]."<br>");
+print("                    username :".$response["username"]."<br>");
+print("                          tx : ".$response["tx"]."<br>");
+print("response from event     Code :".$response[0]."<br>");
+print("                    username :".$response[1]."<br>");
+print("                          tx : ".$response[2]."<br>");
 var_dump($response);
 
 ?>
