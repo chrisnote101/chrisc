@@ -5,9 +5,9 @@ class myObj {
 }
 $ee = "{ 'name': 'abc123@123abc.com'}";
 
-$ver="1.1";
-print("Hello world <br>");
-print("Complete ".$ver."<br>");
+$ver="1.0";
+print("New sub test v".$ver."<br>");
+print("Sub for ".$ee.name."<br>");
 $aeg="ieeHKghW60O4ZhSV2icXAVbmiEE/FT3RSiNC9t0SrfE=";
 $url="https://intakefromcdi.azurewebsites.net/api/CreatePlayground";
 $ch = curl_init($url);
@@ -23,8 +23,9 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/x-www-for
 $response = curl_exec($ch); 
 curl_close($ch);
 $response=json_decode($response,true);
-//print("response from event : Code ".$response.returnCode."<br>");
-//print("response from event : username ".$response.message."<br>");
-var_dump($response);
+print("response from event     Code :".$response.returnCode."<br>");
+print("                    username :".$response.username."<br>");
+print("                          tx : ".$response.tx."<br>");
+//var_dump($response);
 
 ?>
