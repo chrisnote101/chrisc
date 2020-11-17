@@ -19,6 +19,15 @@ curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS,$ee);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/x-www-form-urlencoded' ,'Content-Length: ' . strlen($ee))   );  
+if(curl_exec($ch) === false)
+{
+    echo 'Curl error: ' . curl_error($ch);
+}
+else
+{
+    echo 'Operation completed without any errors';
+}
+
 $response = curl_exec($ch); 
 curl_close($ch);
 $response=json_decode($response,true);
