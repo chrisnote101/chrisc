@@ -10,7 +10,6 @@ $ver="1.1";
 print("New sub test v".$ver."<br>");
 print("Sub for ".$aa->name."<br>");
 $ee=json_encode($aa);
-$url="https://intakefromcdi.azurewebsites.net/api/CreatePlayground";
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
